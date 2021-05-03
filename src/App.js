@@ -1,13 +1,11 @@
 import './App.css';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
 
-      <header className="p-5 bg-danger text-white text-center">
-        <h1 className="display-1">Quoi de neuf, Google Fonts™&nbsp;?</h1>
-        <p className="h4">Le plus récentes, les plus <i>trendy</i> et les plus populaires polices Google.</p>
-      </header>
+      <Header />
 
       <div className="container min-vh-100">
         <div className="row my-5">
