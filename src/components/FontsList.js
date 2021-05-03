@@ -28,7 +28,7 @@ const FontsList = () => {
 
             </section>
         </div>
-    )
-}
+    );
+};
 
 export default FontsList;

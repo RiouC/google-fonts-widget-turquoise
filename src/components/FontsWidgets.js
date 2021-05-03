@@ -10,15 +10,15 @@ const FontsWidgets = () => {
                 </select>
 
                 <div className="mb-3">
-                    <label for="text" className="form-label fw-bold mb-3">Tapez votre text</label>
+                    <label htmlFor="text" className="form-label fw-bold mb-3">Tapez votre text</label>
                     <textarea id="text" className="form-control">Portez ce vieux whisky au juge blond qui fume !? 0123456789</textarea>
                 </div>
 
-                <label for="range" className="form-label fw-bold mb-3">La taille de police</label>
+                <label htmlFor="range" className="form-label fw-bold mb-3">La taille de police</label>
                 <input type="range" className="form-range" id="range" min="8" max="48" step="1" value="20" />
             </div>
         </div >
-    )
-}
+    );
+};
 
 export default FontsWidgets;
