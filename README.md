@@ -8,6 +8,9 @@ https://alyra-google-fonts-widget.netlify.app/
 
 https://google-fonts-widgets.netlify.app/
 
+[]()
+![React Components Diagram](./assets/google_fonts_widgets_diagram.png "React Components Diagram")
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
