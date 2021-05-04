@@ -2,25 +2,13 @@ import { useState, useEffect } from 'react';
 import Font from './Font';
 
 const FontsList = () => {
-    const [fontsList, setFontsList] = useState([{
-        "kind": "webfonts#webfont",
-        "family": "Antic",
-        "variants": [
-            "regular"
-        ],
-        "subsets": [
-            "latin"
-        ],
-        "version": "v4",
-        "lastModified": "2012-07-25",
-        "files": {
-            "regular": "http://themes.googleusercontent.com/static/fonts/antic/v4/hEa8XCNM7tXGzD0Uk0AipA.ttf"
-        }
-    }])
+    const [fontsList, setFontsList] = useState([]);
 
     useEffect(() => {
-        fetch(`https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity`)
+        fetch(`https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDgpNxmPEhDnoT78StxuEGY0IsEfxcxcVI`)
             .then((response) => {
+                console.log("response: ");
+                console.log(response);
                 if (!response.ok) {
                     throw new Error(
                         `Nous n'avons pas pu lire la liste des fonts, status : ${response.status}`
@@ -29,7 +17,9 @@ const FontsList = () => {
                 return response.json();
             })
             .then((data) => {
-                setFontsList(data.results);
+                console.log("data.items: ");
+                console.log(data.items);
+                setFontsList(data.items);
             })
             .catch((error) => {
                 console.error(error.message);
@@ -43,9 +33,7 @@ const FontsList = () => {
             <section className="row mb-5">
                 <h2 className="mb-3"><span className="badge bg-danger">Les plus récentes</span></h2>
 
-                {fontsList.map((popularity) => {
-                    return <Font key={popularity.item} family={popularity.family} category={popularity.category} />;
-                })}
+                {fontsList.map(ft => <Font key={ft.item} kind={ft.kind} family={ft.family} variant={ft.variant} />)}
 
                 <article className="col-lg-6 mb-4">
                     <div className="shadow-sm border p-3 h-100">
