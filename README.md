@@ -1,5 +1,11 @@
 # Netlify
 
+## Modèle
+
+https://alyra-google-fonts-widget.netlify.app/
+
+## Rendu
+
 https://google-fonts-widgets.netlify.app/
 
 # Getting Started with Create React App
