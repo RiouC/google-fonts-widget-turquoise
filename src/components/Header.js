@@ -1,10 +1,10 @@
 const Header = () => {
     return (
         <header className="p-5 bg-danger text-white text-center">
-            <h1 className="display-1">Quoi de neuf, Google Fonts™&nbsp;?</h1>
-            <p className="h4">Le plus récentes, les plus <i>trendy</i> et les plus populaires polices Google.</p>
+            <h1 className="display-1">Google Fonts™&nbsp;? Widget</h1>
+            <p className="h4">Les plus récentes, <i>trendy</i> et populaires polices Google à portée de main.</p>
         </header>
-    )
-}
+    );
+};
 
 export default Header;
