@@ -27,11 +27,13 @@ const FontsList = () => {
     }, []);
 
     // fontsList = [font1, font2, font3, ...]
-
+    
     return (
         <div className="col-lg-9">
           <section className="row mb-5">
-            <h2 className="mb-3"><span className="badge bg-danger">Les plus récentes</span></h2>
+            <h2 className="mb-3">
+              <span className="badge bg-danger">Les plus récentes</span>
+            </h2>
 
             {fontsList.map(ft => <Font key={ft.family}
                                               family={ft.family}

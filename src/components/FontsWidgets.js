@@ -8,9 +8,7 @@ const FontsWidgets = () => {
             <div style={{ position: "sticky", top: "0px" }}>
 
                 <WidgetSelect />
-
                 <WidgetText />
-
                 <WidgetSize />
 
             </div>

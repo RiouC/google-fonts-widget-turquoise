@@ -2,7 +2,7 @@ const WidgetSelect = () => {
     const handleChangeSelect = (e) => {
         console.log(e);
         return e;
-    }
+    };
     return (
         <>
             <label className="fw-bold mb-2" htmlFor="sort">Afficher des polices</label>
@@ -12,7 +12,7 @@ const WidgetSelect = () => {
                 <option value="trending">Top 10 trending</option>
             </select>
         </>
-    )
+    );
 }
 
 export default WidgetSelect;
