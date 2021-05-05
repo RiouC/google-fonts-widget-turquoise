@@ -4,6 +4,10 @@
 
 https://hardfork-support.netlify.app/react/project-google-fonts/
 
+### Google font loader
+
+https://github.com/jakewtaylor/react-google-font-loader
+
 ## Modèle
 
 https://alyra-google-fonts-widget.netlify.app/
