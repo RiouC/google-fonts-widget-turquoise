@@ -18,7 +18,7 @@ const FontsApp = () => {
                           size={size} setSize={setSize}
             />
             <FontsList
-              nbFont={nbFont}
+              /* nbFont={nbFont} */
               fontType={fontType}
               text={text}
               size={size}
