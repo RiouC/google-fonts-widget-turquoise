@@ -21,16 +21,16 @@ const Font = (props) => {
           <article className="col-lg-6 mb-4">
             <div className="shadow-sm border p-3 h-100">
               <h2 className="h6 d-flex aling-items-center justify-content-between">
-                <span style={{ fontFamily: `${family}, ${category}` }}>
-                  {family}
-                </span>
+                <span>{family}</span>
                 <small>
                    {variants.length} variant(s)
                 </small>
               </h2>
               <p><span className="badge bg-dark">DISPLAY</span>
               </p>
-              <p style={{ fontFamily: family, fontSize: `${size}px` }}
+              <p style={{ fontFamily: family,
+                          category: category,
+                          fontSize: `${size}px` }}
                  className="sample">
                 {text}
               </p>

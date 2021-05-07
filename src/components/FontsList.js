@@ -30,7 +30,6 @@ const FontsList = (props) => {
             });
     }, [fontType]);
 
-    // fontsList = [font1, font2, font3, ...]
     return (
         <div className="col-lg-9">
           <section className="row mb-5">
