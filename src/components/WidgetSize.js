@@ -1,8 +1,8 @@
-const WidgetSize = () => {
+const WidgetSize = ({ size, setSize }) => {
     const handleChangeInput = (e) => {
-        console.log(e);
-        return e;
+        setSize(e.target.value);
     };
+
     return (
         <>
           <label htmlFor="range"
@@ -11,10 +11,10 @@ const WidgetSize = () => {
           </label>
           <input type="range" id="range" min="8" max="48" step="1"
                  className="form-range"
-                 value="20"
+                 value={size}
                  onChange={handleChangeInput} />
         </>
     );
-}
+};
 
 export default WidgetSize;

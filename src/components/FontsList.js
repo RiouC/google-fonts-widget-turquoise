@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import Font from './Font';
 
 const FontsList = (props) => {
-    const { nbFont } = props;
+    const { nbFont, fontType, size } = props;
     const [fontsList, setFontsList] = useState([]);
 
     useEffect(() => {
-        fetch(`https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDgpNxmPEhDnoT78StxuEGY0IsEfxcxcVI&sort=popularity`)
+        fetch(`https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDgpNxmPEhDnoT78StxuEGY0IsEfxcxcVI&sort=${fontType}`)
             .then((response) => {
                 console.log("response: ");
                 console.log(response);
@@ -25,9 +25,9 @@ const FontsList = (props) => {
             .catch((error) => {
                 console.error(error.message);
             });
-    }, []);
+    }, [fontType]);
 
-    // fontsList = [font1, font2, font3, ...]    
+    // fontsList = [font1, font2, font3, ...]
     return (
         <div className="col-lg-9">
           <section className="row mb-5">
@@ -36,10 +36,11 @@ const FontsList = (props) => {
             </h2>
 
             {fontsList.slice(0,nbFont).map(ft => <Font key={ft.family}
-                                       family={ft.family}
-                                       variants={ft.variants}
-                                       files={ft.files}
-                                 />)}
+                                                       family={ft.family}
+                                                       variants={ft.variants}
+                                                       files={ft.files}
+                                                       size={size}
+                                                 />)}
 
           </section>
         </div>
