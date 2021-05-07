@@ -4,6 +4,9 @@ import Font from './Font';
 const FontsList = (props) => {
     const { nbFont, fontType, text, size } = props;
     const [fontsList, setFontsList] = useState([]);
+    const fontTypeMessages = {'date': 'Les plus récentes',
+                              'popularity': 'Les plus populaires',
+                              'trending': 'Top 10 trending'};
 
     useEffect(() => {
         fetch(`https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDgpNxmPEhDnoT78StxuEGY0IsEfxcxcVI&sort=${fontType}`)
@@ -32,10 +35,10 @@ const FontsList = (props) => {
         <div className="col-lg-9">
           <section className="row mb-5">
             <h2 className="mb-3">
-              <span className="badge bg-danger">Les plus récentes</span>
+              <span className="badge bg-danger">{fontTypeMessages[fontType]}</span>
             </h2>
 
-            {fontsList.slice(0,nbFont).map(ft => <Font key={ft.family}
+            {fontsList.slice(0,10).map(ft => <Font key={ft.family}
                                                        family={ft.family}
                                                        variants={ft.variants}
                                                        files={ft.files}

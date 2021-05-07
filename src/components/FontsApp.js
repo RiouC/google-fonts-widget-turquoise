@@ -7,8 +7,8 @@ const FontsApp = () => {
     const [fontType, setFontType] = useState("date");
     const [text, setText] = useState("Portez ce vieux whisky au juge blond qui fume !? 0123456789");
     const [size, setSize] = useState(16);
-    const [nbFont, setNbFont] = useState(10);
-    setNbFont(10);
+    // const [nbFont, setNbFont] = useState(10);
+    // setNbFont(10);
     return (
         <div className="container min-vh-100">
           <div className="row my-5">
