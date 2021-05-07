@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import Font from './Font';
 
-const FontsList = () => {
+const FontsList = (props) => {
+    const { nbFont } = props;
     const [fontsList, setFontsList] = useState([]);
 
     useEffect(() => {
-        fetch(`https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDgpNxmPEhDnoT78StxuEGY0IsEfxcxcVI`)
+        fetch(`https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDgpNxmPEhDnoT78StxuEGY0IsEfxcxcVI&sort=popularity`)
             .then((response) => {
                 console.log("response: ");
                 console.log(response);
@@ -26,8 +27,7 @@ const FontsList = () => {
             });
     }, []);
 
-    // fontsList = [font1, font2, font3, ...]
-    
+    // fontsList = [font1, font2, font3, ...]    
     return (
         <div className="col-lg-9">
           <section className="row mb-5">
@@ -35,10 +35,11 @@ const FontsList = () => {
               <span className="badge bg-danger">Les plus récentes</span>
             </h2>
 
-            {fontsList.map(ft => <Font key={ft.family}
-                                              family={ft.family}
-                                              variants={ft.variants}
-                                              files={ft.files}/>)}
+            {fontsList.slice(0,nbFont).map(ft => <Font key={ft.family}
+                                       family={ft.family}
+                                       variants={ft.variants}
+                                       files={ft.files}
+                                 />)}
 
           </section>
         </div>
