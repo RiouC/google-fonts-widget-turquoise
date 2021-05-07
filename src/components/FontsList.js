@@ -34,7 +34,7 @@ const FontsList = (props) => {
     return (
         <div className="col-lg-9">
           <section className="row mb-5">
-            <h2 className="mb-3">
+            <h2 className="mb-3 display-font-type">
               <span className="badge bg-danger">{fontTypeMessages[fontType]}</span>
             </h2>
 
