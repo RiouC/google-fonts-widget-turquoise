@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Font from './Font';
 
 const FontsList = (props) => {
-    const { nbFont, fontType, text, size } = props;
+    const { fontType, text, size } = props;
     const [fontsList, setFontsList] = useState([]);
     const fontTypeMessages = {'date': 'Les plus récentes',
                               'popularity': 'Les plus populaires',
