@@ -1,5 +1,5 @@
 const WidgetSelect = (props) => {
-    const { fontType, setFontType } = props;
+    const { fontType, setFontType, fontTypeMessages } = props;
     const handleChangeSelect = (e) => {
         console.log(e.target.value);
         setFontType(e.target.value);
@@ -11,12 +11,12 @@ const WidgetSelect = (props) => {
                   className="form-select mb-4"
                   value={fontType}
                   onChange={handleChangeSelect}>
-            <option value="date">Les plus récentes</option>
-            <option value="popularity">Les plus populaires</option>
-            <option value="trending">Top 10 trending</option>
+            <option value="date">{fontTypeMessages.date}</option>
+            <option value="popularity">{fontTypeMessages.popularity}</option>
+            <option value="trending">{fontTypeMessages.trending}</option>
           </select>
         </>
     );
-}
+};
 
 export default WidgetSelect;

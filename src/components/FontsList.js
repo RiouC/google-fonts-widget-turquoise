@@ -2,11 +2,8 @@ import { useState, useEffect } from 'react';
 import Font from './Font';
 
 const FontsList = (props) => {
-    const { fontType, text, size } = props;
+    const { fontType, text, size, fontTypeMessages } = props;
     const [fontsList, setFontsList] = useState([]);
-    const fontTypeMessages = {'date': 'Les plus récentes',
-                              'popularity': 'Les plus populaires',
-                              'trending': 'Top 10 trending'};
 
     useEffect(() => {
         fetch(`https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDgpNxmPEhDnoT78StxuEGY0IsEfxcxcVI&sort=${fontType}`)

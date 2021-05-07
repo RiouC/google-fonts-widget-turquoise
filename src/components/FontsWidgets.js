@@ -3,12 +3,16 @@ import WidgetText from './WidgetText';
 import WidgetSize from './WidgetSize';
 
 const FontsWidgets = (props) => {
-    const { fontType, setFontType, text, setText, size, setSize } = props;
+    const { fontType, setFontType, text, setText, size, setSize, fontTypeMessages } = props;
     return (
         <div className="col-lg-3 mb-4">
           <div style={{ position: "sticky", top: "0px" }}>
 
-            <WidgetSelect fontType={fontType} setFontType={setFontType} />
+            <WidgetSelect
+              fontType={fontType}
+              setFontType={setFontType}
+              fontTypeMessages={fontTypeMessages}
+            />
             <WidgetText text={text} setText={setText} />
             <WidgetSize size={size} setSize={setSize} />
 
