@@ -1,7 +1,7 @@
 import GoogleFontLoader from 'react-google-font-loader';
 
 const Font = (props) => {
-    const { family, variants, category, files, size } = props;
+    const { family, variants, category, files, text, size } = props;
     return (
         <>
           <GoogleFontLoader
@@ -32,7 +32,7 @@ const Font = (props) => {
               </p>
               <p style={{ fontFamily: family, fontSize: `${size}px` }}
                  className="sample">
-                Portez ce vieux whisky au juge blond qui fume !? 0123456789
+                {text}
               </p>
               <a rel="noopener noreferrer" target="_blank"
                  className="text-danger"

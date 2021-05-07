@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Font from './Font';
 
 const FontsList = (props) => {
-    const { nbFont, fontType, size } = props;
+    const { nbFont, fontType, text, size } = props;
     const [fontsList, setFontsList] = useState([]);
 
     useEffect(() => {
@@ -39,6 +39,7 @@ const FontsList = (props) => {
                                                        family={ft.family}
                                                        variants={ft.variants}
                                                        files={ft.files}
+                                                       text={text}
                                                        size={size}
                                                  />)}
 

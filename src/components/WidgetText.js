@@ -1,7 +1,7 @@
-const WidgetText = () => {
+const WidgetText = (props) => {
+    const { text, setText } = props;
     const handleChangeText = (e) => {
-        console.log(e);
-        return e;
+        setText(e.target.value);
     };
     return (
         <div className="mb-3">
@@ -9,7 +9,7 @@ const WidgetText = () => {
                  className="form-label fw-bold mb-3">Tapez votre text</label>
           <textarea id="text" className="form-control"
                     onChange={handleChangeText}
-                    value="Portez ce vieux whisky au juge blond qui fume !? 0123456789">
+                    value={text}>
           </textarea>
         </div>
     );
