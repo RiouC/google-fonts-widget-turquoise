@@ -6,7 +6,7 @@ import FontsList from './FontsList';
 const FontsApp = () => {
     const [fontType, setFontType] = useState("date");
     const [text, setText] = useState("Portez ce vieux whisky au juge blond qui fume !? 0123456789");
-    const [size, setSize] = useState(16);
+    const [size, setSize] = useState(20);
     // const [nbFont, setNbFont] = useState(10);
     // setNbFont(10);
     return (
