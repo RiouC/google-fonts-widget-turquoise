@@ -41,6 +41,16 @@ const Font = (props) => {
                  href={`https://fonts.google.com/specimen/${family.split(' ').join('+')}`}>
                 Voir sur Google Fonts (ouvre un nouveau tab)
               </a>
+              <details>
+                <summary>
+                  DDL
+                </summary>
+                <ul>
+                  {Object.keys(files).map(f =>
+                      <li key={f}><a href={files[f]}>{f}</a></li>
+                  )}
+                </ul>
+              </details>
             </div>
           </article>
         </>
