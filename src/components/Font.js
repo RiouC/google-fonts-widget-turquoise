@@ -18,15 +18,16 @@ const Font = (props) => {
             subsets={['cyrillic-ext', 'greek']}
           />
 
-          <article className="col-lg-6 mb-4">
+          <article className="col-lg-6 mb-4" itemScope itemType="https://schema.org/Thing">
             <div className="shadow-sm border p-3 h-100">
               <h2 className="h6 d-flex aling-items-center justify-content-between">
-                <span>{family}</span>
+                <span itemProp="name">{family}</span>
                 <small>
                    {variants.length} variant(s)
                 </small>
               </h2>
-              <p><span className="badge bg-dark">DISPLAY</span>
+              <p>
+                <span className="badge bg-dark">{category.toUpperCase()}</span>
               </p>
               <p style={{ fontFamily: family,
                           category: category,
