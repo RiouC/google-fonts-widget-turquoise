@@ -35,12 +35,13 @@ const FontsList = (props) => {
             </h2>
 
             {fontsList.slice(0,10).map(ft => <Font key={ft.family}
-                                                       family={ft.family}
-                                                       variants={ft.variants}
-                                                       files={ft.files}
-                                                       text={text}
-                                                       size={size}
-                                                 />)}
+                                                   family={ft.family}
+                                                   variants={ft.variants}
+                                                   files={ft.files}
+                                                   category={ft.category}
+                                                   text={text}
+                                                   size={size}
+                                             />)}
 
           </section>
         </main>
