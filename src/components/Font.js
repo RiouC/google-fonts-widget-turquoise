@@ -20,10 +20,10 @@ const Font = (props) => {
 
           <article className="col-lg-6 mb-4" itemScope itemType="https://schema.org/Thing">
             <div className="shadow-sm border p-3 h-100">
-              <h2 className="h6 d-flex aling-items-center justify-content-between">
+              <h2 className="h6 d-flex align-items-center justify-content-between">
                 <span itemProp="name">{family}</span>
                 <small>
-                   {variants.length} variant(s)
+                  {variants.length} variant(s)
                 </small>
               </h2>
               <p>
@@ -37,7 +37,7 @@ const Font = (props) => {
               </p>
               <a rel="noopener noreferrer" target="_blank"
                  className="text-danger"
-                itemProp="url"
+                 itemProp="url"
                  href={`https://fonts.google.com/specimen/${family.split(' ').join('+')}`}>
                 Voir sur Google Fonts (ouvre un nouveau tab)
               </a>

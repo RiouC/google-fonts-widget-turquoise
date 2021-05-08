@@ -6,7 +6,13 @@ const WidgetSelect = (props) => {
     };
     return (
         <>
-          <label className="fw-bold mb-2" htmlFor="sort">Afficher des polices</label>
+          <label
+            className="fw-bold mb-2"
+            htmlFor="sort"
+            aria-label="Choisissez comment trier les polices">
+            Afficher des polices
+          </label>
+
           <select id="sort"
                   className="form-select mb-4"
                   value={fontType}

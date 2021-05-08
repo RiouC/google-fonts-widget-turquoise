@@ -12,7 +12,9 @@ const WidgetSize = ({ size, setSize }) => {
           <input type="range" id="range" min="8" max="48" step="1"
                  className="form-range"
                  value={size}
-                 onChange={handleChangeInput} />
+                 onChange={handleChangeInput}
+                 aria-label="réglette pour changer la taille de la police"
+          />
         </>
     );
 };
