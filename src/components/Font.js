@@ -39,10 +39,10 @@ const Font = (props) => {
                  className="text-danger"
                  itemProp="url"
                  href={`https://fonts.google.com/specimen/${family.split(' ').join('+')}`}>
-                Voir sur Google Fonts (ouvre un nouveau tab)
+                Voir sur Google Fonts (ouvre un nouvel onglet)
               </a>
               <div className="d-flex justify-content-end">
-                <details aria-label="téléchargememt direct des polices en ttf ou otf">
+                <details aria-label="Téléchargement direct des polices en ttf ou otf">
                   <summary className="pe-3">
                     DDL
                   </summary>
@@ -60,5 +60,3 @@ const Font = (props) => {
 };
 
 export default Font;
-
-// 28 : {variants.length} variant(s)
