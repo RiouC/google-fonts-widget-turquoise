@@ -37,7 +37,8 @@ const Font = (props) => {
               </p>
               <a rel="noopener noreferrer" target="_blank"
                  className="text-danger"
-                 href={`${files[0]}`}>
+                itemProp="url"
+                 href={`https://fonts.google.com/specimen/${family.split(' ').join('+')}`}>
                 Voir sur Google Fonts (ouvre un nouveau tab)
               </a>
             </div>
