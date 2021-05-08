@@ -10,8 +10,6 @@ const FontsList = (props) => {
     useEffect(() => {
         fetch(url)
             .then((response) => {
-                console.log("response: ");
-                console.log(response);
                 if (!response.ok) {
                     throw new Error(
                         `Nous n'avons pas pu lire la liste des fonts, status : ${response.status}`

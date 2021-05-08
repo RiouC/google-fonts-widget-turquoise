@@ -19,7 +19,7 @@ const Font = (props) => {
           />
 
           <article className="col-lg-6 mb-4" itemScope itemType="https://schema.org/Thing">
-            <div className="shadow-sm border p-3 h-100">
+            <div className="shadow-sm border p-3 h-100 d-flex flex-column justify-content-between">
               <h2 className="h6 d-flex align-items-center justify-content-between">
                 <span itemProp="name">{family}</span>
                 <small>
@@ -41,16 +41,18 @@ const Font = (props) => {
                  href={`https://fonts.google.com/specimen/${family.split(' ').join('+')}`}>
                 Voir sur Google Fonts (ouvre un nouveau tab)
               </a>
-              <details>
-                <summary>
-                  DDL
-                </summary>
-                <ul>
-                  {Object.keys(files).map(f =>
-                      <li key={f}><a href={files[f]}>{f}</a></li>
-                  )}
-                </ul>
-              </details>
+              <div className="d-flex justify-content-end">
+                <details aria-label="téléchargememt direct des polices en ttf ou otf">
+                  <summary className="pe-3">
+                    DDL
+                  </summary>
+                  <ul>
+                    {Object.keys(files).map(f =>
+                        <li key={f}><a href={files[f]}>{f}</a></li>
+                    )}
+                  </ul>
+                </details>
+              </div>
             </div>
           </article>
         </>
