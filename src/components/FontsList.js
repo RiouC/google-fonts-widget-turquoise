@@ -4,9 +4,11 @@ import Font from './Font';
 const FontsList = (props) => {
     const { fontType, text, size, fontTypeMessages } = props;
     const [fontsList, setFontsList] = useState([]);
+    const apiKey = process.env.REACT_APP_GOOGLEFONTSWIDGET_API_KEY;
+    const url = `https://www.googleapis.com/webfonts/v1/webfonts?key=${apiKey}&sort=${fontType}`;
 
     useEffect(() => {
-        fetch(`https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDgpNxmPEhDnoT78StxuEGY0IsEfxcxcVI&sort=${fontType}`)
+        fetch(url)
             .then((response) => {
                 console.log("response: ");
                 console.log(response);
@@ -18,14 +20,12 @@ const FontsList = (props) => {
                 return response.json();
             })
             .then((data) => {
-                console.log("data.items: ");
-                console.log(data.items);
                 setFontsList(data.items);
             })
             .catch((error) => {
                 console.error(error.message);
             });
-    }, [fontType]);
+    }, [url]);
 
     return (
         <main className="col-lg-9">
@@ -42,7 +42,6 @@ const FontsList = (props) => {
                                                    text={text}
                                                    size={size}
                                              />)}
-
           </section>
         </main>
     );
