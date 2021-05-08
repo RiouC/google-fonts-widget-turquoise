@@ -5,7 +5,7 @@ import WidgetSize from './WidgetSize';
 const FontsWidgets = (props) => {
     const { fontType, setFontType, text, setText, size, setSize, fontTypeMessages } = props;
     return (
-        <div className="col-lg-3 mb-4">
+        <aside className="col-lg-3 mb-4">
           <div style={{ position: "sticky", top: "0px" }}>
 
             <WidgetSelect
@@ -17,7 +17,7 @@ const FontsWidgets = (props) => {
             <WidgetSize size={size} setSize={setSize} />
 
           </div>
-        </div >
+        </aside >
     );
 };
 
