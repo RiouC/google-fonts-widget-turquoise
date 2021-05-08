@@ -1,7 +1,13 @@
+import { useState } from 'react';
 import GoogleFontLoader from 'react-google-font-loader';
 
 const Font = (props) => {
     const { family, variants, category, files, text, size } = props;
+    const [dropdown, setDropdown] = useState(false);
+
+    const handleClickSummary = () => {
+        setDropdown(!dropdown);
+    };
     return (
         <>
           <GoogleFontLoader
@@ -19,7 +25,9 @@ const Font = (props) => {
           />
 
           <article className="col-lg-6 mb-4" itemScope itemType="https://schema.org/Thing">
-            <div className="shadow-sm border p-3 h-100 d-flex flex-column justify-content-between">
+            <div className={dropdown
+                            ? "shadow-sm border p-3 h-100 d-flex flex-column justify-content-between"
+                            : "shadow-sm border p-3 h-100 d-flex flex-column justify-content-start"}>
               <h2 className="h6 d-flex align-items-center justify-content-between">
                 <span itemProp="name">{family}</span>
                 <small>
@@ -43,7 +51,7 @@ const Font = (props) => {
               </a>
               <div className="d-flex justify-content-end">
                 <details aria-label="Téléchargement direct des polices en ttf ou otf">
-                  <summary className="pe-3">
+                  <summary className="pe-3" onClick={handleClickSummary}>
                     DDL
                   </summary>
                   <ul>
