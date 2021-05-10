@@ -21,7 +21,7 @@ function App() {
 
       <FontsApp />
 
-      <Footer />
+      <Footer darkMode={darkMode} setDarkMode={setDarkMode} />
 
     </div >
   );
