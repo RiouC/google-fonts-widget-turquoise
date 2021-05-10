@@ -14,13 +14,15 @@ const Header = ({ darkMode, setDarkMode }) => {
               {darkMode ? "☽" : "☀"}
             </label>
             <input
+              id="flexSwitchCheckDefault"
               className="form-check-input"
               type="checkbox"
               aria-label="Dark Mode"
               key="flexSwitchCheckDefault"
               name="flexSwitchCheckDefault"
               onChange={handleChangeDarkMode}
-              checked={darkMode}>
+              checked={darkMode}
+              tabIndex="0">
             </input>
           </div >
         </header>
