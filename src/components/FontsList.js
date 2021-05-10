@@ -26,22 +26,29 @@ const FontsList = (props) => {
     }, [url]);
 
     return (
-        <main className="col-lg-9">
-          <section className="row mb-5">
-            <h2 className="mb-3 display-font-type">
-              <span className="badge bg-danger">{fontTypeMessages[fontType]}</span>
-            </h2>
+        <>
+          <main className="col-lg-9">
+            <section className="row mb-5">
+              <h2 className="mb-3 display-font-type">
+                <span className="badge bg-danger">{fontTypeMessages[fontType]}</span>
+              </h2>
 
-            {fontsList.slice(0,10).map(ft => <Font key={ft.family}
-                                                   family={ft.family}
-                                                   variants={ft.variants}
-                                                   files={ft.files}
-                                                   category={ft.category}
-                                                   text={text}
-                                                   size={size}
-                                             />)}
-          </section>
-        </main>
+              {fontsList.slice(0,10).map(ft => <Font key={ft.family}
+                                        family={ft.family}
+                                        variants={ft.variants}
+                                        files={ft.files}
+                                        category={ft.category}
+                                        text={text}
+                                        size={size}
+                                   />)}
+            </section>
+          </main>
+          <nav className="text-muted text-end">
+            <button className="btn btn-secondary">
+              <a href="#top" className="text-reset text-decoration-none">Top</a>
+            </button>
+          </nav>
+        </>
     );
 };
 
