@@ -14,6 +14,7 @@ const WidgetSize = ({ size, setSize }) => {
                  value={size}
                  onChange={handleChangeInput}
                  aria-label="réglette pour changer la taille de la police"
+                 tabIndex="0"
           />
         </>
     );
