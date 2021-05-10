@@ -1,7 +1,7 @@
 const WidgetSelect = (props) => {
     const { fontType, setFontType, fontTypeMessages } = props;
     const handleChangeSelect = (e) => {
-        console.log(e.target.value);
+        // console.log(e.target.value);
         setFontType(e.target.value);
     };
     return (
