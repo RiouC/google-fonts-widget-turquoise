@@ -44,13 +44,14 @@ const FontsList = (props) => {
             </section>
           </main>
           <nav className="text-muted text-end">
-            <button className="btn btn-secondary">
-              <a href="#top"
-                 className="text-reset text-decoration-none"
-                 aria-label="Retour en haut de la page">
+            <a href="#top"
+               className="text-reset text-decoration-none link-secondary"
+               aria-label="Retour en haut de la page"
+               tabIndex="0">
+              <button className="btn btn-secondary">
                 Top
-              </a>
-            </button>
+              </button>
+            </a>
           </nav>
         </>
     );
