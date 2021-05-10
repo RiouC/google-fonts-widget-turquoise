@@ -34,18 +34,22 @@ const FontsList = (props) => {
               </h2>
 
               {fontsList.slice(0,10).map(ft => <Font key={ft.family}
-                                        family={ft.family}
-                                        variants={ft.variants}
-                                        files={ft.files}
-                                        category={ft.category}
-                                        text={text}
-                                        size={size}
-                                   />)}
+                                                     family={ft.family}
+                                                     variants={ft.variants}
+                                                     files={ft.files}
+                                                     category={ft.category}
+                                                     text={text}
+                                                     size={size}
+                                               />)}
             </section>
           </main>
           <nav className="text-muted text-end">
             <button className="btn btn-secondary">
-              <a href="#top" className="text-reset text-decoration-none">Top</a>
+              <a href="#top"
+                 className="text-reset text-decoration-none"
+                 aria-label="Retour en haut de la page">
+                Top
+              </a>
             </button>
           </nav>
         </>
